@@ -622,7 +622,7 @@ https://unsplash.com/
 [github-shield]: https://img.shields.io/badge/my-github-green.svg
 [github-url]: https://github.com/vitorstabile
 [issues-shield]: https://img.shields.io/badge/link-issues-green.svg
-[issues-url]: https://github.com/vitorstabile/work/issues
+[issues-url]: https://github.com/vitorstabile/service-oriented-architecture/issues
 [license-shield]: https://img.shields.io/badge/license-mit-blue.svg 
 [license-url]: https://github.com/vitorstabile/service-oriented-architecture/blob/main/LICENSE.txt
 [wso2apimanager-url]: https://wso2.com/api-manager/
