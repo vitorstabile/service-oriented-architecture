@@ -616,7 +616,7 @@ https://unsplash.com/
 [project-shield]: https://img.shields.io/badge/link-project-green.svg
 [project-url]: https://github.com/vitorstabile/work/tree/main/AMA
 [linkedin-shield]: https://img.shields.io/badge/my-linkedin-blue.svg 
-[linkedin-url]: https://www.linkedin.com/in/vitor-stabile-garcia-5b151b67
+[linkedin-url]: https://www.linkedin.com/in/vitor-garcia-5b151b67/
 [portfolio-shield]: https://img.shields.io/badge/my-portfolio-red.svg
 [portfolio-url]: https://vitorstabile.github.io
 [github-shield]: https://img.shields.io/badge/my-github-green.svg
@@ -624,7 +624,7 @@ https://unsplash.com/
 [issues-shield]: https://img.shields.io/badge/link-issues-green.svg
 [issues-url]: https://github.com/vitorstabile/work/issues
 [license-shield]: https://img.shields.io/badge/license-mit-blue.svg 
-[license-url]: https://github.com/vitorstabile/work/blob/main/AMA/LICENSE.txt
+[license-url]: https://github.com/vitorstabile/service-oriented-architecture/blob/main/LICENSE.txt
 [wso2apimanager-url]: https://wso2.com/api-manager/
 [wso2ei-url]: https://wso2.com/integration/
 [wso2identity-url]: https://wso2.com/identity-and-access-management/
