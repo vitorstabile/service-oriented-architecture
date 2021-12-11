@@ -1,0 +1,18 @@
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope">
+   <soapenv:Body>
+      <Entries xmlns="http://ws.wso2.org/dataservice">
+         <Entry>
+            <nome>fulano2</nome>
+            <telefone>222222222</telefone>
+            <cidade>Lisboa2</cidade>
+            <pais>Portugal2</pais>
+         </Entry>
+         <Entry>
+            <nome>fulano2</nome>
+            <telefone>222222222</telefone>
+            <cidade>Lisboa2</cidade>
+            <pais>Portugal2</pais>
+         </Entry>
+      </Entries>
+   </soapenv:Body>
+</soapenv:Envelope>

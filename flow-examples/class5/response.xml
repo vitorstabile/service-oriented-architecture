@@ -1,0 +1,14 @@
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope">
+   <soapenv:Body>
+      <Entries xmlns="http://ws.wso2.org/dataservice">
+         <Entry>
+            <AccountID>1</AccountID>
+            <Branch>AOB</Branch>
+            <AccountNumber>A00012</AccountNumber>
+            <AccountType>CURRENT</AccountType>
+            <Balance>231221.0</Balance>
+            <ModifiedDate>2014-12-02+00:00</ModifiedDate>
+         </Entry>
+      </Entries>
+   </soapenv:Body>
+</soapenv:Envelope>

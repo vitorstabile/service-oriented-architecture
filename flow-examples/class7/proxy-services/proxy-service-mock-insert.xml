@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="proxy-service-mock-insert" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <log level="custom">
+                <property name="Log Message Request" value="Mensagem recebida pelo proxy"/>
+            </log>
+            <send>
+                <endpoint>
+                    <address uri="http://desktop-v7l2rqu:8280/services/MockDetailService/nome"/>
+                </endpoint>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log level="custom">
+                <property name="Log Message Server" value="Entrei na outsequence"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence>
+            <log level="custom">
+                <property name="Log Message Server" value="Entrei na faultsequence"/>
+            </log>
+        </faultSequence>
+    </target>
+</proxy>

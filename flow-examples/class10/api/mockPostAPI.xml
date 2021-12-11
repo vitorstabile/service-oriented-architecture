@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/mockPostAPI" name="mockPostAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST">
+        <inSequence>
+            <log level="custom">
+                <property name="Log Message Server" value="Request do cliente recebida pela API"/>
+            </log>
+            <property expression="//AddClienteOp/nome/text()" name="AddClienteOpNome" scope="default" type="STRING"/>
+            <log level="custom">
+                <property expression="$ctx:AddClienteOpNome" name="Mensagem Extraida "/>
+            </log>
+            <class name="com.myclass.ClassPost"/>
+            <property expression="get-property('novoValor')" name="AddClienteOpNome2" scope="default" type="STRING"/>
+            <log level="custom">
+                <property expression="$ctx:AddClienteOpNome2" name="Mensagem Extraida "/>
+            </log>
+            <payloadFactory media-type="xml">
+                <format>
+                    <AddClienteOp>
+                        <nome>$1</nome>
+                        <telefone>$2</telefone>
+                        <cidade>$3</cidade>
+                        <pais>$4</pais>
+                    </AddClienteOp>
+                </format>
+                <args>
+                    <arg evaluator="xml" expression="$ctx:AddClienteOpNome2"/>
+                    <arg evaluator="xml" expression="//telefone"/>
+                    <arg evaluator="xml" expression="//cidade"/>
+                    <arg evaluator="xml" expression="//pais"/>
+                </args>
+            </payloadFactory>
+            <send>
+                <endpoint>
+                    <address uri="http://localhost:8280/services/mockService.SOAP12Endpoint"/>
+                </endpoint>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log level="custom">
+                <property name="Log Message Server" value="Response do server enviada para o Cliente "/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence>
+            <log level="custom">
+                <property name="Log Message Server" value="Erro Gerado"/>
+            </log>
+        </faultSequence>
+    </resource>
+</api>

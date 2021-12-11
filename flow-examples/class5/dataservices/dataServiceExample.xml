@@ -1,0 +1,25 @@
+<data name="AccountDetailService" transports="http https local">
+   <config enableOData="false" id="AccountDetails">
+      <property name="driverClassName">com.mysql.jdbc.Driver</property>
+      <property name="url">jdbc:mysql://localhost:3306/trainingdb</property>
+      <property name="username">root</property>
+      <property name="password">1234</property>
+   </config>
+   <query id="AccountID" useConfig="AccountDetails">
+      <sql>SELECT AccountID,Branch,AccountNumber,AccountType,Balance,ModifiedDate FROM ACCOUNT WHERE AccountID=:AccountID</sql>
+      <result element="Entries" rowName="Entry">
+         <element column="AccountID" name="AccountID" xsdType="string"/>
+         <element column="Branch" name="Branch" xsdType="string"/>
+         <element column="AccountNumber" name="AccountNumber" xsdType="string"/>
+         <element column="AccountType" name="AccountType" xsdType="string"/>
+         <element column="Balance" name="Balance" xsdType="string"/>
+         <element column="ModifiedDate" name="ModifiedDate" xsdType="string"/>
+      </result>
+      <param name="AccountID" sqlType="STRING"/>
+   </query>
+   <operation name="AccountID">
+      <call-query href="AccountID">
+         <with-param name="AccountID" query-param="AccountID"/>
+      </call-query>
+   </operation>
+</data>

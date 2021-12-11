@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="sequenceBullet10PayLoad" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="custom">
+        <property name="Log Message Server" value="Entrei na sequence sequenceBullet10PayLoad"/>
+    </log>
+    <property expression="//ackResponse/nome/text()" name="ackResponseNome" scope="default" type="STRING"/>
+    <property expression="//ackResponse/telefone/text()" name="ackResponseTelefone" scope="default" type="STRING"/>
+    <log level="custom">
+        <property expression="$ctx:ackResponseNome" name="Menssagem Extraida 1 " xmlns:ns="http://org.apache.synapse/xsd"/>
+        <property expression="$ctx:ackResponseTelefone" name="Menssagem Extraida 2 " xmlns:ns="http://org.apache.synapse/xsd"/>
+        <property expression="$ctx:requestDestino" name="Menssagem Extraida 3"/>
+    </log>
+    <payloadFactory media-type="xml">
+        <format>
+            <ackResponse>
+                <nome>$1</nome>
+                <telefone>$2</telefone>
+                <MensagemIncluida>$3</MensagemIncluida>
+            </ackResponse>
+        </format>
+        <args>
+            <arg evaluator="xml" expression="$ctx:ackResponseNome"/>
+            <arg evaluator="xml" expression="$ctx:ackResponseTelefone"/>
+            <arg evaluator="xml" expression="$ctx:requestDestino"/>
+        </args>
+    </payloadFactory>
+</sequence>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localEntry key="bullet11WSDL" xmlns="http://ws.apache.org/ns/synapse">
+    <wsdl:definitions targetNamespace="http://ws.apache.org/axis2" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://ws.apache.org/axis2" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <wsdl:types>
+            <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <xs:element name="ackResponse">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="nome" type="xs:string"/>
+                    <xs:element name="telefone" type="xs:string"/>
+                    <xs:element name="cidade" type="xs:string"/>
+                    <xs:element name="pais" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+    </xs:schema>
+        </wsdl:types>
+        <wsdl:message name="in"/>
+        <wsdl:message name="out"/>
+        <wsdl:portType name="bullet11PortType">
+            <wsdl:operation name="mediate">
+                <wsdl:input message="tns:in" wsaw:Action="urn:mediate"/>
+                <wsdl:output message="tns:out" wsaw:Action="urn:mediateResponse"/>
+            </wsdl:operation>
+        </wsdl:portType>
+        <wsdl:binding name="bullet11Soap11Binding" type="tns:bullet11PortType">
+            <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+            <wsdl:operation name="mediate">
+                <soap:operation soapAction="urn:mediate" style="document"/>
+                <wsdl:input>
+                    <soap:body use="literal"/>
+                </wsdl:input>
+                <wsdl:output>
+                    <soap:body use="literal"/>
+                </wsdl:output>
+            </wsdl:operation>
+        </wsdl:binding>
+        <wsdl:binding name="bullet11Soap12Binding" type="tns:bullet11PortType">
+            <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+            <wsdl:operation name="mediate">
+                <soap12:operation soapAction="urn:mediate" style="document"/>
+                <wsdl:input>
+                    <soap12:body use="literal"/>
+                </wsdl:input>
+                <wsdl:output>
+                    <soap12:body use="literal"/>
+                </wsdl:output>
+            </wsdl:operation>
+        </wsdl:binding>
+        <wsdl:binding name="bullet11HttpBinding" type="tns:bullet11PortType">
+            <http:binding verb="POST"/>
+            <wsdl:operation name="mediate">
+                <http:operation location="mediate"/>
+                <wsdl:input>
+                    <mime:content part="parameters" type="text/xml"/>
+                </wsdl:input>
+                <wsdl:output>
+                    <mime:content part="parameters" type="text/xml"/>
+                </wsdl:output>
+            </wsdl:operation>
+        </wsdl:binding>
+        <wsdl:service name="bullet11">
+            <wsdl:port binding="tns:bullet11Soap11Binding" name="bullet11HttpSoap11Endpoint">
+                <soap:address location="http://DESKTOP-V7L2RQU:8280/services/bullet11.bullet11HttpSoap11Endpoint"/>
+            </wsdl:port>
+            <wsdl:port binding="tns:bullet11Soap11Binding" name="bullet11HttpsSoap11Endpoint">
+                <soap:address location="https://DESKTOP-V7L2RQU:8243/services/bullet11.bullet11HttpsSoap11Endpoint"/>
+            </wsdl:port>
+            <wsdl:port binding="tns:bullet11Soap12Binding" name="bullet11HttpSoap12Endpoint">
+                <soap12:address location="http://DESKTOP-V7L2RQU:8280/services/bullet11.bullet11HttpSoap12Endpoint"/>
+            </wsdl:port>
+            <wsdl:port binding="tns:bullet11Soap12Binding" name="bullet11HttpsSoap12Endpoint">
+                <soap12:address location="https://DESKTOP-V7L2RQU:8243/services/bullet11.bullet11HttpsSoap12Endpoint"/>
+            </wsdl:port>
+            <wsdl:port binding="tns:bullet11HttpBinding" name="bullet11HttpsEndpoint">
+                <http:address location="https://DESKTOP-V7L2RQU:8243/services/bullet11.bullet11HttpsEndpoint"/>
+            </wsdl:port>
+            <wsdl:port binding="tns:bullet11HttpBinding" name="bullet11HttpEndpoint">
+                <http:address location="http://DESKTOP-V7L2RQU:8280/services/bullet11.bullet11HttpEndpoint"/>
+            </wsdl:port>
+        </wsdl:service>
+    </wsdl:definitions>
+</localEntry>

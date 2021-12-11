@@ -1,0 +1,23 @@
+<data name="MockDetailService" transports="http https local">
+   <config enableOData="false" id="MockeDetail">
+      <property name="driverClassName">com.mysql.jdbc.Driver</property>
+      <property name="url">jdbc:mysql://localhost:3306/mock</property>
+      <property name="username">root</property>
+      <property name="password">1234</property>
+   </config>
+   <query id="mockDetailID" useConfig="MockeDetail">
+      <sql>SELECT nome,telefone,cidade,pais FROM cliente WHERE nome = ?;</sql>
+      <result element="Entries" rowName="Entry">
+         <element column="nome" name="nome" xsdType="string"/>
+         <element column="telefone" name="telefone" xsdType="string"/>
+         <element column="cidade" name="cidade" xsdType="string"/>
+         <element column="pais" name="pais" xsdType="string"/>
+      </result>
+      <param name="nome" sqlType="STRING"/>
+   </query>
+   <operation name="mockDetail">
+      <call-query href="mockDetailID">
+         <with-param name="nome" query-param="nome"/>
+      </call-query>
+   </operation>
+</data>

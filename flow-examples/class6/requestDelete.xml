@@ -1,0 +1,9 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" 
+xmlns:dat="http://ws.wso2.org/dataservice">
+   <soap:Header/>
+   <soap:Body>
+      <dat:mockDelete>
+         <dat:nome>fulano3</dat:nome>
+      </dat:mockDelete>
+   </soap:Body>
+</soap:Envelope>

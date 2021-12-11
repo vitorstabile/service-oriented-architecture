@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dat="http://ws.wso2.org/dataservice">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <dat:mockDetail>
+         <dat:nome>fulano1</dat:nome>
+      </dat:mockDetail>
+   </soapenv:Body>
+</soapenv:Envelope>

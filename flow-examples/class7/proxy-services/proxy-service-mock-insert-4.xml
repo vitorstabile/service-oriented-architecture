@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="proxy-service-mock-insert-4"
+       transports="http https"
+       startOnLoad="true">
+   <target>
+      <inSequence>
+         <log level="custom">
+            <property name="Log Message Request" value="Mensagem recebida pelo proxy"/>
+         </log>
+         <send>
+            <endpoint>
+               <address uri="http://DESKTOP-V7L2RQU:8280/services/MockDeleteService/mockDelete/deleteCliente"/>
+            </endpoint>
+         </send>
+      </inSequence>
+      <outSequence>
+         <log level="custom">
+            <property name="Log Message Server" value="Entrei na outsequence"/>
+         </log>
+         <send/>
+      </outSequence>
+      <faultSequence>
+         <log level="custom">
+            <property name="Log Message Server" value="Entrei na faultsequence"/>
+         </log>
+      </faultSequence>
+   </target>
+</proxy>

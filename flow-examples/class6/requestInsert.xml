@@ -1,0 +1,11 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:dat="http://ws.wso2.org/dataservice">
+   <soap:Header/>
+   <soap:Body>
+      <dat:mockInsert>
+         <dat:nome>fulano2</dat:nome>
+         <dat:telefone>222222222</dat:telefone>
+         <dat:cidade>Lisboa2</dat:cidade>
+         <dat:pais>Portugal2</dat:pais>
+      </dat:mockInsert>
+   </soap:Body>
+</soap:Envelope>

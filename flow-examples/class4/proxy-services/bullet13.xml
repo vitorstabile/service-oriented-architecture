@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="bullet13" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <log level="custom">
+                <property name="Log Message Request" value="Mensagem recebida pelo proxy"/>
+            </log>
+            <sequence key="sequenceBullet13Request"/>
+            <send>
+                <endpoint>
+                    <address uri="http://run.mocky.io/v3/acb24c80-119e-4419-85e8-41864df34bae">
+                        <timeout>
+                            <responseAction>fault</responseAction>
+                        </timeout>
+                    </address>
+                </endpoint>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log level="custom">
+                <property name="Log Message Server" value="Entrei na outsequence"/>
+            </log>
+            <property expression="//ackResponse/cidade/text()" name="responseServico" scope="default" type="STRING"/>
+            <log level="custom">
+                <property expression="$ctx:responseServico" name="Menssagem Extraida " xmlns:ns="http://org.apache.synapse/xsd"/>
+            </log>
+            <filter xpath="get-property('responseServico') = 'Lisboa'">
+                <then>
+                    <log level="custom">
+                        <property name="------------------------------------respose-------------------------------------" value="succeed!!!"/>
+                    </log>
+                    <payloadFactory media-type="xml">
+                        <format>
+                            <ackResponseAlterado>
+                                <ackResponseAlterado2>Cidade É Lisboa</ackResponseAlterado2>
+                            </ackResponseAlterado>
+                        </format>
+                        <args/>
+                    </payloadFactory>
+                </then>
+                <else>
+                    <log level="custom">
+                        <property name="------------------------------------respose-------------------------------------" value="fail!!!"/>
+                    </log>
+                    <payloadFactory media-type="xml">
+                        <format>
+                            <ackResponseAlterado>
+                                <ackResponseAlterado2>Cidade NÃO É Lisboa</ackResponseAlterado2>
+                            </ackResponseAlterado>
+                        </format>
+                        <args/>
+                    </payloadFactory>
+                </else>
+            </filter>
+            <send/>
+        </outSequence>
+        <faultSequence>
+            <log level="custom">
+                <property name="Log Message Server" value="Entrei na faultsequence"/>
+            </log>
+            <log level="custom">
+                <property name="text" value="Error Code ->"/>
+                <property expression="get-property('ERROR_CODE')" name="code"/>
+            </log>
+            <log level="custom">
+                <property name="text" value="Error Message ->"/>
+                <property expression="get-property('ERROR_MESSAGE')" name="message"/>
+            </log>
+            <log level="custom">
+                <property name="text" value="Error Detail ->"/>
+                <property expression="get-property('ERROR_DETAIL')" name="detail"/>
+            </log>
+            <log level="custom">
+                <property name="text" value="Error Exception ->"/>
+                <property expression="get-property('ERROR_EXCEPTION')" name="exception"/>
+            </log>
+        </faultSequence>
+    </target>
+</proxy>

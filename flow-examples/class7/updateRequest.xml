@@ -1,0 +1,12 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" 
+			xmlns:dat="http://ws.wso2.org/dataservice">
+   <soap:Header/>
+   <soap:Body>
+   	<dat:mockUpdate>
+         <dat:telefone>outrotelefone</dat:telefone>
+         <dat:cidade>outracidade</dat:cidade>
+         <dat:pais>outropais</dat:pais>
+         <dat:nome>fulano2</dat:nome>
+     </dat:mockUpdate>
+    </soap:Body>
+</soap:Envelope>

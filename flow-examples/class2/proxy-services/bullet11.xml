@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="bullet11" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <log level="custom">
+                <property name="Log Message Server" value="Entrei no proxyserver"/>
+            </log>
+            <property expression="get-property('bullet11Schema')" name="bullet11Schema" scope="default" type="STRING"/>
+            <sequence key="DynamicValidation"/>
+            <log level="custom">
+                <property name="Log Message Request" value="Mensagem recebida pelo proxy"/>
+            </log>
+            <property expression="get-property('serviceAMA')" name="urlVariable" scope="default" type="STRING"/>
+            <log level="custom">
+                <property expression="$ctx:urlVariable" name="Menssagem Extraida " xmlns:ns="http://org.apache.synapse/xsd"/>
+            </log>
+            <sequence key="sequenceBullet11Request"/>
+            <send>
+                <endpoint name="serviceAMAEndPoint">
+                    <address uri="${urlVariable}"/>
+                </endpoint>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log level="custom">
+                <property name="Log Message Server" value="Entrei na outsequence"/>
+            </log>
+            <sequence key="sequenceBullet11PayLoad"/>
+            <send/>
+        </outSequence>
+        <faultSequence>
+            <log level="custom">
+                <property name="Log Message Error" value="Erro no Envio"/>
+            </log>
+        </faultSequence>
+    </target>
+    <publishWSDL key="bullet11WSDL"/>
+    <parameter name="disableREST">false</parameter>
+    <parameter name="disableSOAP11">true</parameter>
+</proxy>

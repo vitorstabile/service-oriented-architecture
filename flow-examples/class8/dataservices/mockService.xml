@@ -1,0 +1,88 @@
+<data name="mockService" transports="http https local">
+   <config enableOData="false" id="mockID">
+      <property name="driverClassName">com.mysql.jdbc.Driver</property>
+      <property name="url">jdbc:mysql://localhost:3306/mock</property>
+      <property name="username">root</property>
+      <property name="password">1234</property>
+   </config>
+   <query id="getClienteID" useConfig="mockID">
+      <sql>SELECT nome,telefone,cidade,pais FROM cliente WHERE nome=?;</sql>
+      <result element="Entries" rowName="Entry">
+         <element column="nome" name="nome" xsdType="string"/>
+         <element column="telefone" name="telefone" xsdType="string"/>
+         <element column="cidade" name="cidade" xsdType="string"/>
+         <element column="pais" name="pais" xsdType="string"/>
+      </result>
+      <param name="nome" sqlType="STRING"/>
+   </query>
+   <query id="newClienteID" useConfig="mockID">
+      <sql>INSERT into cliente (nome,telefone,cidade,pais) values (?,?,?,?);</sql>
+      <param name="nome" sqlType="STRING"/>
+      <param name="telefone" sqlType="STRING"/>
+      <param name="cidade" sqlType="STRING"/>
+      <param name="pais" sqlType="STRING"/>
+   </query>
+   <query id="updateClienteID" useConfig="mockID">
+      <sql>UPDATE cliente set telefone = ?, cidade = ?, pais = ? where nome = ?;</sql>
+      <param name="telefone" sqlType="STRING"/>
+      <param name="cidade" sqlType="STRING"/>
+      <param name="pais" sqlType="STRING"/>
+      <param name="nome" sqlType="STRING"/>
+   </query>
+   <query id="deleteClienteID" useConfig="mockID">
+      <sql>DELETE from cliente where nome=?;</sql>
+      <param name="nome" sqlType="STRING"/>
+   </query>
+   <operation name="AddClienteOp">
+      <call-query href="newClienteID">
+         <with-param name="nome" query-param="nome"/>
+         <with-param name="telefone" query-param="telefone"/>
+         <with-param name="cidade" query-param="cidade"/>
+         <with-param name="pais" query-param="pais"/>
+      </call-query>
+   </operation>
+   <operation name="UpdateClienteOp">
+      <call-query href="updateClienteID">
+         <with-param name="telefone" query-param="telefone"/>
+         <with-param name="cidade" query-param="cidade"/>
+         <with-param name="pais" query-param="pais"/>
+         <with-param name="nome" query-param="nome"/>
+      </call-query>
+   </operation>
+   <operation name="DeleteClienteOp">
+      <call-query href="deleteClienteID">
+         <with-param name="nome" query-param="nome"/>
+      </call-query>
+   </operation>
+   <operation name="GetClienteOp">
+      <call-query href="getClienteID">
+         <with-param name="nome" query-param="nome"/>
+      </call-query>
+   </operation>
+   <resource method="GET" path="cliente/{nome}">
+      <call-query href="getClienteID">
+         <with-param name="nome" query-param="nome"/>
+      </call-query>
+   </resource>
+   <resource method="POST" path="cliente/nome/{nome}/telefone/{telefone}/cidade/{cidade}/pais/{pais}" returnRequestStatus="true">
+      <call-query href="newClienteID">
+         <with-param name="nome" query-param="nome"/>
+         <with-param name="telefone" query-param="telefone"/>
+         <with-param name="cidade" query-param="cidade"/>
+         <with-param name="pais" query-param="pais"/>
+      </call-query>
+   </resource>
+   <resource method="DELETE" path="cliente/nome/{nome}">
+      <call-query href="deleteClienteID">
+         <with-param name="nome" query-param="nome"/>
+      </call-query>
+   </resource>
+   <resource method="PUT" path="cliente/telefone/{telefone}/cidade/{cidade}/pais/{pais}/nome/{nome}">
+      <call-query href="updateClienteID">
+         <with-param name="telefone" query-param="telefone"/>
+         <with-param name="cidade" query-param="cidade"/>
+         <with-param name="pais" query-param="pais"/>
+         <with-param name="nome" query-param="nome"/>
+      </call-query>
+   </resource>
+</data>

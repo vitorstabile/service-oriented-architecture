@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="bullet12" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <log level="custom">
+                <property name="Log Message Request" value="Mensagem recebida pelo proxy"/>
+            </log>
+            <sequence key="sequenceBullet12Request"/>
+            <send>
+                <endpoint>
+                    <address uri="http://enderecoerrado.com/">
+                        <timeout>
+                            <responseAction>fault</responseAction>
+                        </timeout>
+                    </address>
+                </endpoint>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log level="custom">
+                <property name="Log Message Server" value="Entrei na outsequence"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence>
+            <log level="custom">
+                <property name="Log Message Server" value="Entrei na faultsequence"/>
+            </log>
+            <log level="custom">
+                <property name="text" value="Error Code ->"/>
+                <property expression="get-property('ERROR_CODE')" name="code"/>
+            </log>
+            <log level="custom">
+                <property name="text" value="Error Message ->"/>
+                <property expression="get-property('ERROR_MESSAGE')" name="message"/>
+            </log>
+            <log level="custom">
+                <property name="text" value="Error Detail ->"/>
+                <property expression="get-property('ERROR_DETAIL')" name="detail"/>
+            </log>
+            <log level="custom">
+                <property name="text" value="Error Exception ->"/>
+                <property expression="get-property('ERROR_EXCEPTION')" name="exception"/>
+            </log>
+        </faultSequence>
+    </target>
+</proxy>

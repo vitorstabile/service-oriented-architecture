@@ -1,0 +1,5 @@
+<ackResponse xmlns="http://ws.apache.org/ns/synapse">
+   <nome>Fulano de tal</nome>
+   <telefone>999-888-777</telefone>
+   <MensagemIncluida>Alagarve</MensagemIncluida>
+</ackResponse>

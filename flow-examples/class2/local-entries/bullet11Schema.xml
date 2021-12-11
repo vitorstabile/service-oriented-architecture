@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localEntry key="bullet11Schema" xmlns="http://ws.apache.org/ns/synapse">
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <xs:element name="ackResponse">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="nome" type="xs:string"/>
+                    <xs:element name="telefone" type="xs:string"/>
+                    <xs:element name="cidade" type="xs:string"/>
+                    <xs:element name="pais" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+    </xs:schema>
+</localEntry>

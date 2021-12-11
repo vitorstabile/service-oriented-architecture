@@ -1,0 +1,8 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:dat="http://ws.wso2.org/dataservice">
+   <soap:Header/>
+   <soap:Body>
+      <dat:AccountID>
+         <dat:AccountID>1</dat:AccountID>
+      </dat:AccountID>
+   </soap:Body>
+</soap:Envelope>

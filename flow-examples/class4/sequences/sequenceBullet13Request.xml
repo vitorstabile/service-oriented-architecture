@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="sequenceBullet13Request" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="custom">
+        <property name="Log Message Request" value="Entrada na Sequence sequenceBullet13Request"/>
+    </log>
+    <property expression="$header/destino/text()" name="requestDestino" scope="default" type="STRING"/>
+    <log level="custom">
+        <property expression="$ctx:requestDestino" name="Menssagem Extraida " xmlns:ns="http://org.apache.synapse/xsd"/>
+    </log>
+</sequence>

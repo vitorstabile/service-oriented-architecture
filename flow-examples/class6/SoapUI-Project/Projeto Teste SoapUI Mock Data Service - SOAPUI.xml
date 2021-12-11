@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="80b5633a-b9c9-4347-9028-11b2468cb2e3" activeEnvironment="Default" name="mock Data Service SOAP" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="b776d640-db8d-499f-811b-54c08804bb02" wsaVersion="NONE" name="mockServiceSOAP12Binding" type="wsdl" bindingName="{http://ws.wso2.org/dataservice}mockServiceSOAP12Binding" soapVersion="1_2" anonymous="optional" definition="http://localhost:8280/services/mockService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8280/services/mockService?wsdl"><con:part><con:url>http://localhost:8280/services/mockService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://ws.wso2.org/dataservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns0="http://ws.wso2.org/dataservice" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:documentation/>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://ws.wso2.org/dataservice">
+      <xs:element name="DataServiceFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="current_params" type="xs:string"/>
+            <xs:element name="current_request_name" type="xs:string"/>
+            <xs:element name="nested_exception" type="xs:string"/>
+            <xs:element name="source_data_service">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="location" type="xs:string"/>
+                  <xs:element name="default_namespace" type="xs:string"/>
+                  <xs:element name="description" type="xs:string"/>
+                  <xs:element name="data_service_name" type="xs:string"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="ds_code" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="REQUEST_STATUS" type="xs:string"/>
+      <xs:element name="DATA_SERVICE_RESPONSE">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:any minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteClienteOp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nome" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateClienteOp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="telefone" nillable="true" type="xs:string"/>
+            <xs:element name="cidade" nillable="true" type="xs:string"/>
+            <xs:element name="pais" nillable="true" type="xs:string"/>
+            <xs:element name="nome" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddClienteOp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nome" nillable="true" type="xs:string"/>
+            <xs:element name="telefone" nillable="true" type="xs:string"/>
+            <xs:element name="cidade" nillable="true" type="xs:string"/>
+            <xs:element name="pais" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetClienteOp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nome" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Entries" type="ns0:Entries"/>
+      <xs:complexType name="Entries">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="Entry" type="ns0:Entry"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Entry">
+        <xs:sequence>
+          <xs:element name="nome" nillable="true" type="xs:string"/>
+          <xs:element name="telefone" nillable="true" type="xs:string"/>
+          <xs:element name="cidade" nillable="true" type="xs:string"/>
+          <xs:element name="pais" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="_getcliente_nome">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nome" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_pais">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nome" nillable="true" type="xs:string"/>
+            <xs:element name="telefone" nillable="true" type="xs:string"/>
+            <xs:element name="cidade" nillable="true" type="xs:string"/>
+            <xs:element name="pais" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="_deletecliente_nome_nome">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nome" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="_putcliente_telefone_telefone_cidade_cidade_pais_pais_nome_nome">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="telefone" nillable="true" type="xs:string"/>
+            <xs:element name="cidade" nillable="true" type="xs:string"/>
+            <xs:element name="pais" nillable="true" type="xs:string"/>
+            <xs:element name="nome" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="_deletecliente_nome_nomeRequest">
+    <wsdl:part name="parameters" element="ns0:_deletecliente_nome_nome"/>
+  </wsdl:message>
+  <wsdl:message name="DeleteClienteOpRequest">
+    <wsdl:part name="parameters" element="ns0:DeleteClienteOp"/>
+  </wsdl:message>
+  <wsdl:message name="_getcliente_nomeRequest">
+    <wsdl:part name="parameters" element="ns0:_getcliente_nome"/>
+  </wsdl:message>
+  <wsdl:message name="_getcliente_nomeResponse">
+    <wsdl:part name="parameters" element="ns0:Entries"/>
+  </wsdl:message>
+  <wsdl:message name="DataServiceFault">
+    <wsdl:part name="parameters" element="ns0:DataServiceFault"/>
+  </wsdl:message>
+  <wsdl:message name="_putcliente_telefone_telefone_cidade_cidade_pais_pais_nome_nomeRequest">
+    <wsdl:part name="parameters" element="ns0:_putcliente_telefone_telefone_cidade_cidade_pais_pais_nome_nome"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateClienteOpRequest">
+    <wsdl:part name="parameters" element="ns0:UpdateClienteOp"/>
+  </wsdl:message>
+  <wsdl:message name="_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_paisRequest">
+    <wsdl:part name="parameters" element="ns0:_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_pais"/>
+  </wsdl:message>
+  <wsdl:message name="_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_paisResponse">
+    <wsdl:part name="parameters" element="ns0:REQUEST_STATUS"/>
+  </wsdl:message>
+  <wsdl:message name="AddClienteOpRequest">
+    <wsdl:part name="parameters" element="ns0:AddClienteOp"/>
+  </wsdl:message>
+  <wsdl:message name="GetClienteOpRequest">
+    <wsdl:part name="parameters" element="ns0:GetClienteOp"/>
+  </wsdl:message>
+  <wsdl:message name="GetClienteOpResponse">
+    <wsdl:part name="parameters" element="ns0:Entries"/>
+  </wsdl:message>
+  <wsdl:portType name="mockServicePortType">
+    <wsdl:operation name="_deletecliente_nome_nome">
+      <wsdl:documentation/>
+      <wsdl:input message="ns0:_deletecliente_nome_nomeRequest" wsaw:Action="urn:_deletecliente_nome_nome"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClienteOp">
+      <wsdl:documentation/>
+      <wsdl:input message="ns0:DeleteClienteOpRequest" wsaw:Action="urn:DeleteClienteOp"/>
+    </wsdl:operation>
+    <wsdl:operation name="_getcliente_nome">
+      <wsdl:documentation/>
+      <wsdl:input message="ns0:_getcliente_nomeRequest" wsaw:Action="urn:_getcliente_nome"/>
+      <wsdl:output message="ns0:_getcliente_nomeResponse" wsaw:Action="urn:_getcliente_nomeResponse"/>
+      <wsdl:fault message="ns0:DataServiceFault" name="DataServiceFault" wsaw:Action="urn:_getcliente_nomeDataServiceFault"/>
+    </wsdl:operation>
+    <wsdl:operation name="_putcliente_telefone_telefone_cidade_cidade_pais_pais_nome_nome">
+      <wsdl:documentation/>
+      <wsdl:input message="ns0:_putcliente_telefone_telefone_cidade_cidade_pais_pais_nome_nomeRequest" wsaw:Action="urn:_putcliente_telefone_telefone_cidade_cidade_pais_pais_nome_nome"/>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClienteOp">
+      <wsdl:documentation/>
+      <wsdl:input message="ns0:UpdateClienteOpRequest" wsaw:Action="urn:UpdateClienteOp"/>
+    </wsdl:operation>
+    <wsdl:operation name="_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_pais">
+      <wsdl:documentation/>
+      <wsdl:input message="ns0:_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_paisRequest" wsaw:Action="urn:_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_pais"/>
+      <wsdl:output message="ns0:_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_paisResponse" wsaw:Action="urn:_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_paisResponse"/>
+      <wsdl:fault message="ns0:DataServiceFault" name="DataServiceFault" wsaw:Action="urn:_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_paisDataServiceFault"/>
+    </wsdl:operation>
+    <wsdl:operation name="AddClienteOp">
+      <wsdl:documentation/>
+      <wsdl:input message="ns0:AddClienteOpRequest" wsaw:Action="urn:AddClienteOp"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetClienteOp">
+      <wsdl:documentation/>
+      <wsdl:input message="ns0:GetClienteOpRequest" wsaw:Action="urn:GetClienteOp"/>
+      <wsdl:output message="ns0:GetClienteOpResponse" wsaw:Action="urn:GetClienteOpResponse"/>
+      <wsdl:fault message="ns0:DataServiceFault" name="DataServiceFault" wsaw:Action="urn:GetClienteOpDataServiceFault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="mockServiceSOAP11Binding" type="ns0:mockServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="_deletecliente_nome_nome">
+      <soap:operation soapAction="urn:_deletecliente_nome_nome" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClienteOp">
+      <soap:operation soapAction="urn:DeleteClienteOp" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="_getcliente_nome">
+      <soap:operation soapAction="urn:_getcliente_nome" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DataServiceFault">
+        <soap:fault use="literal" name="DataServiceFault"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="_putcliente_telefone_telefone_cidade_cidade_pais_pais_nome_nome">
+      <soap:operation soapAction="urn:_putcliente_telefone_telefone_cidade_cidade_pais_pais_nome_nome" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClienteOp">
+      <soap:operation soapAction="urn:UpdateClienteOp" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_pais">
+      <soap:operation soapAction="urn:_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_pais" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DataServiceFault">
+        <soap:fault use="literal" name="DataServiceFault"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddClienteOp">
+      <soap:operation soapAction="urn:AddClienteOp" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetClienteOp">
+      <soap:operation soapAction="urn:GetClienteOp" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DataServiceFault">
+        <soap:fault use="literal" name="DataServiceFault"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="mockServiceSOAP12Binding" type="ns0:mockServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="_deletecliente_nome_nome">
+      <soap12:operation soapAction="urn:_deletecliente_nome_nome" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClienteOp">
+      <soap12:operation soapAction="urn:DeleteClienteOp" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="_getcliente_nome">
+      <soap12:operation soapAction="urn:_getcliente_nome" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DataServiceFault">
+        <soap12:fault use="literal" name="DataServiceFault"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="_putcliente_telefone_telefone_cidade_cidade_pais_pais_nome_nome">
+      <soap12:operation soapAction="urn:_putcliente_telefone_telefone_cidade_cidade_pais_pais_nome_nome" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClienteOp">
+      <soap12:operation soapAction="urn:UpdateClienteOp" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_pais">
+      <soap12:operation soapAction="urn:_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_pais" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DataServiceFault">
+        <soap12:fault use="literal" name="DataServiceFault"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddClienteOp">
+      <soap12:operation soapAction="urn:AddClienteOp" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetClienteOp">
+      <soap12:operation soapAction="urn:GetClienteOp" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DataServiceFault">
+        <soap12:fault use="literal" name="DataServiceFault"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="mockServiceHttpBinding" type="ns0:mockServicePortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="_deletecliente_nome_nome">
+      <http:operation location="cliente/nome/(nome)"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClienteOp">
+      <http:operation location="DeleteClienteOp"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="_getcliente_nome">
+      <http:operation location="cliente/(nome)"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_putcliente_telefone_telefone_cidade_cidade_pais_pais_nome_nome">
+      <http:operation location="cliente/telefone/(telefone)/cidade/(cidade)/pais/(pais)/nome/(nome)"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClienteOp">
+      <http:operation location="UpdateClienteOp"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_pais">
+      <http:operation location="cliente/nome/(nome)/telefone/(telefone)/cidade/(cidade)/pais/(pais)"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddClienteOp">
+      <http:operation location="AddClienteOp"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetClienteOp">
+      <http:operation location="GetClienteOp"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="mockService">
+    <wsdl:port name="SecureSOAP11Endpoint" binding="ns0:mockServiceSOAP11Binding">
+      <soap:address location="https://DESKTOP-V7L2RQU:8243/services/mockService.SecureSOAP11Endpoint"/>
+    </wsdl:port>
+    <wsdl:port name="SOAP11Endpoint" binding="ns0:mockServiceSOAP11Binding">
+      <soap:address location="http://DESKTOP-V7L2RQU:8280/services/mockService.SOAP11Endpoint"/>
+    </wsdl:port>
+    <wsdl:port name="SecureSOAP12Endpoint" binding="ns0:mockServiceSOAP12Binding">
+      <soap12:address location="https://DESKTOP-V7L2RQU:8243/services/mockService.SecureSOAP12Endpoint"/>
+    </wsdl:port>
+    <wsdl:port name="SOAP12Endpoint" binding="ns0:mockServiceSOAP12Binding">
+      <soap12:address location="http://DESKTOP-V7L2RQU:8280/services/mockService.SOAP12Endpoint"/>
+    </wsdl:port>
+    <wsdl:port name="SecureHTTPEndpoint" binding="ns0:mockServiceHttpBinding">
+      <http:address location="https://DESKTOP-V7L2RQU:8243/services/mockService.SecureHTTPEndpoint"/>
+    </wsdl:port>
+    <wsdl:port name="HTTPEndpoint" binding="ns0:mockServiceHttpBinding">
+      <http:address location="http://DESKTOP-V7L2RQU:8280/services/mockService.HTTPEndpoint"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://DESKTOP-V7L2RQU:8280/services/mockService.SOAP12Endpoint</con:endpoint><con:endpoint>https://DESKTOP-V7L2RQU:8243/services/mockService.SecureSOAP12Endpoint</con:endpoint></con:endpoints><con:operation id="463b71a4-9ad9-4549-9e82-a6c2c89aac64" isOneWay="false" action="urn:_deletecliente_nome_nome" name="_deletecliente_nome_nome" bindingOperationName="_deletecliente_nome_nome" type="One-Way" inputName="" sendsAttachments="false"><con:settings/></con:operation><con:operation id="a3f3629e-2025-4098-874b-594588f9ef6f" isOneWay="false" action="urn:_getcliente_nome" name="_getcliente_nome" bindingOperationName="_getcliente_nome" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false"><con:settings/></con:operation><con:operation id="6582c68d-c958-4b9d-ba9e-72e1401433c9" isOneWay="false" action="urn:_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_pais" name="_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_pais" bindingOperationName="_postcliente_nome_nome_telefone_telefone_cidade_cidade_pais_pais" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false"><con:settings/></con:operation><con:operation id="a65d6819-31ba-4ed2-9f21-eb2f5e5a150d" isOneWay="false" action="urn:_putcliente_telefone_telefone_cidade_cidade_pais_pais_nome_nome" name="_putcliente_telefone_telefone_cidade_cidade_pais_pais_nome_nome" bindingOperationName="_putcliente_telefone_telefone_cidade_cidade_pais_pais_nome_nome" type="One-Way" inputName="" sendsAttachments="false"><con:settings/></con:operation><con:operation id="65ce0f22-064e-4920-8e89-94523911d19d" isOneWay="false" action="urn:AddClienteOp" name="AddClienteOp" bindingOperationName="AddClienteOp" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="099a6ff7-3ccc-4ad9-856a-febc7ce50b6c" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://DESKTOP-V7L2RQU:8280/services/mockService.SOAP12Endpoint</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:dat="http://ws.wso2.org/dataservice">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <dat:AddClienteOp>\r
+         <dat:nome>fulano6</dat:nome>\r
+         <dat:telefone>666666666</dat:telefone>\r
+         <dat:cidade>Lisboa6</dat:cidade>\r
+         <dat:pais>Portugal6</dat:pais>\r
+      </dat:AddClienteOp>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:AddClienteOp"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="209d2ed9-7a10-453f-aa4e-4473a8ceb641" isOneWay="false" action="urn:DeleteClienteOp" name="DeleteClienteOp" bindingOperationName="DeleteClienteOp" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4412f2cd-970c-43d8-811e-d0ae1a8b6957" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://DESKTOP-V7L2RQU:8280/services/mockService.SOAP12Endpoint</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:dat="http://ws.wso2.org/dataservice">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <dat:DeleteClienteOp>\r
+         <dat:nome>fulano6</dat:nome>\r
+      </dat:DeleteClienteOp>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:DeleteClienteOp"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="5317ff64-f32f-4989-919d-f3756a17879f" isOneWay="false" action="urn:GetClienteOp" name="GetClienteOp" bindingOperationName="GetClienteOp" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c2dd2395-f7c6-43b7-abca-92bc26e5a621" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://DESKTOP-V7L2RQU:8280/services/mockService.SOAP12Endpoint</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:dat="http://ws.wso2.org/dataservice">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <dat:GetClienteOp>\r
+         <dat:nome>fulano2</dat:nome>\r
+      </dat:GetClienteOp>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:GetClienteOp"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="e75bf817-43da-449a-b2e6-8dc78fca735a" isOneWay="false" action="urn:UpdateClienteOp" name="UpdateClienteOp" bindingOperationName="UpdateClienteOp" type="One-Way" inputName="" sendsAttachments="false"><con:settings/></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
