@@ -5,7 +5,7 @@
 1. [Project Status](#projectstatus)
 2. [About the Project](#abouttheproject)
 3. [Project Description](#projectdescription)
-4. [Chapter 1: Introdução](#chapter1)
+4. [Chapter 1: Introduction](#chapter1)
     - [Chapter 1 - Part 1: O que é o WSO2?](#chapter1part1)
     - [Chapter 1 - Part 2: Quais produtos principais o WSO2 oferece?](#chapter1part2)
     - [Chapter 1 - Part 3: O que é o WSO2 Enterprise Integrator 6.1.1 (WSO2 EI)?](#chapter1part3)
@@ -15,11 +15,11 @@
     - [Chapter 1 - Part 7: O que é um ESB?](#chapter1part7)
     - [Chapter 1 - Part 8: Certificações da Plataforma WSO2](#chapter1part8)
     - [Chapter 1 - Part 9: Links Úteis](#chapter1part9)
-5. [Chapter 2: Tutorial Básico WSO2 EI 6.1.1](#chapter2)
+5. [Chapter 2: Basic WSO2 EI 6.1.1 Tutorial](#chapter2)
     - [Chapter 2 - Part 1: Configurando o WSO2 EI no Windows 10 64 Bits](#chapter2part1)
     - [Chapter 2 - Part 2: Configurando o WSO2 EI no Linux](#chapter2part2)
-    - [Chapter 2 - Part 3: Trabalhando com Proxy Services](#chapter2part3)
-    - [Chapter 2 - Part 4: Extraindo Conteúdo de Mensagens com Proxy Services](#chapter2part4)
+    - [Chapter 2 - Part 3: Working with Proxy Services](#chapter2part3)
+    - [Chapter 2 - Part 4: Extracting Message Content](#chapter2part4)
 6. [Usage](#usage)
 7. [Contributors](#contributors)
 8. [Contributing](#contributing)
@@ -34,7 +34,7 @@ Project Status: Under Development :heavy_check_mark:
 
 # About the Project <a name="abouttheproject"></a>
 
-This project
+This project 
 
 [![Project][project-shield]][project-url]
 
