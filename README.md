@@ -156,27 +156,28 @@ There are other areas, like [Working with Scheduled Tasks][scheduletask-url] and
 
 #### <a name="chapter2part1"></a>Chapter 2 - Part 1: Configuring WSO2 EI 6.1.1 on Windows 10 64 Bit
 
-- Instalação do Java JDK 8
-	- Baixar e instalar o Java JDK 8 da Zulu (zulu8.54.0.21-ca-jdk8.0.292-win_x64) -> [Link][zulujava-url]
-	- Criar uma pasta de nome Java em C:\Program Files
-	- Extrair o conteudo baixado em C:\Program Files\Java
-	- Ir em editar variaveis de sistema
-	- Criar a variavel JAVA_HOME com o valor C:\Program Files\Java\jdk-8.0.292\
-	- Ir na variavel Path e adicionar o caminho C:\Program Files\Java\jdk-8.0.292\bin
+- Java JDK 8 Installation
+	- Download and install Java JDK 8 from Zulu (`zulu8.54.0.21-ca-jdk8.0.292-win_x64`) -> [Link][zulujava-url]
+	- Create a folder named `Java` in `C:\Program Files`
+	- Extract the downloaded content to `C:\Program Files\Java`
+	- Go to edit system variables
+	- Create the `JAVA_HOME` variable with the value `C:\Program Files\Java\jdk-8.0.292\`
+	- Go to the `Path` variable and add the path `C:\Program Files\Java\jdk-8.0.292\bin`
 
-- Instalação do WSO2 EI 6.1.1
-	- Selecionar a versão Enterprise Integrator 6.1.1 -> [Link][wso2eidown-url]
-	- Fazer Download do Binary
-	- Criar uma pasta Work em C:\
-	- Extrair o conteudo baixado em C:\Work
-	- O diretório C:\Work\wso2ei-6.1.1 será chamado de (WSO2_ESB_HOME)
-	- Executar o Broker: C:\Work\wso2ei-6.1.1\wso2\broker\bin\wso2server.bat
-	- Ao aparecer https://localhost:9446/carbon/ no console do broker, colocar este endereço no browser.
-	- Entrar com o login e senha admin, admin.
-	- Executar o Integrator: C:\Work\wso2ei-6.1.1\bin\integrator.bat
-	- Ao aparecer https://localhost:9443/carbon/ no console do Integrator, colocar este endereço no browser.
-	- Entrar com o login e senha admin, admin.
-	- Não Fechar as janelas dos consoles do Broker e Integrator. Toda vez que for usado o ESB, os consoles devem ficar ativos.
+- Installation of WSO2 EI 6.1.1
+	- Select Enterprise Integrator 6.1.1 version -> [Link][wso2eidown-url]
+	- Download Binary
+	- Create a `Work` folder in `C:\`
+	- Extract the content downloaded to `C:\Work`
+	- The directory `C:\Work\wso2ei-6.1.1` will be called (`WSO2_ESB_HOME`)
+	- Run the Broker: `C:\Work\wso2ei-6.1.1\wso2\broker\bin\wso2server.bat`
+	- When appearing `https://localhost:9446/carbon/` on the Broker console, put this address in the browser.
+	- Run the Analytics: `C:\Work\wso2ei-6.1.1\wso2\analytics\bin\wso2server.bat`
+	- When appearing `https://localhost:9444/carbon/` on the Analytics console, put this address in the browser
+	- Login with login and password `admin`, `admin`.
+	- Run the Integrator: `C:\Work\wso2ei-6.1.1\bin\integrator.bat`
+	- When appearing `https://localhost:9443/carbon/` on the Integrator console, put this address in the browser.
+	- Login with login and password `admin`, `admin`.
 
 - Instalação da IDE Eclipse
 	- Selecionar a versão Enterprise Integrator 6.1.1 -> [Link][wso2eidown-url]
