@@ -7,7 +7,7 @@
 3. [Project Description](#projectdescription)
 4. [Chapter 1: Introduction](#chapter1)
     - [Chapter 1 - Part 1: What is SOA?](#chapter1part1)
-    - [Chapter 1 - Part 2: O que é o WSO2?](#chapter1part1)
+    - [Chapter 1 - Part 2: What is ESB?](#chapter1part2)
     - [Chapter 1 - Part 3: Quais produtos principais o WSO2 oferece?](#chapter1part2)
     - [Chapter 1 - Part 4: O que é o WSO2 Enterprise Integrator 6.1.1 (WSO2 EI)?](#chapter1part3)
     - [Chapter 1 - Part 5: ESB Profile](#chapter1part4)
@@ -67,13 +67,11 @@ In this way, SOA represents an important stage in the evolution of application d
 
 [Source][ibmsoa-url]
 
-#### <a name="chapter1part2"></a>Chapter 1 - Part 2: Quais produtos principais o WSO2 oferece?
+#### <a name="chapter1part2"></a>Chapter 1 - Part 2: What is an ESB?
 
-- [WSO2 API Manager][wso2apimanager-url]: Plataforma completa para construir, integrar e expor seus serviços digitais como APIs gerenciadas na nuvem, no local e arquiteturas híbridas para conduzir sua estratégia de transformação digital. Ele permite que os desenvolvedores de API projetem, publiquem e gerenciem o ciclo de vida de APIs e gerentes de produto de API para criar produtos de API a partir de uma ou mais APIs.
 
-- [WSO2 Enterprise Integrator][wso2ei-url]: O WSO2 Enterprise Integrator (WSO2 EI) é uma plataforma de integração híbrida de código aberto que permite a integração centrada em API usando estilos de arquitetura de integração, como microsserviços ou ESB centralizado. A plataforma fornece um designer gráfico de fluxo de arrastar e soltar e uma abordagem orientada à configuração para construir soluções de integração de baixo código para projetos nativos de contêiner e nuvem.
 
-- [WSO2 Identity Server][wso2identity-url]: O WSO2 Identity Server é um produto IAM de código aberto orientado por API projetado para ajudá-lo a construir soluções CIAM eficazes. Ele é baseado em padrões abertos, como SAML, OAuth e OIDC, com as opções de implantação de local, nuvem e híbrido. Ele oferece suporte a requisitos complexos de IAM devido à sua alta extensibilidade.
+[Source][ibmsoa-url]
 
 #### <a name="chapter1part3"></a>Chapter 1 - Part 3: O que é o WSO2 Enterprise Integrator 6.1.1 (WSO2 EI)?
 
