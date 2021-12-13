@@ -109,7 +109,7 @@ There are other areas, like [Working with Scheduled Tasks][scheduletask-url] and
 
 - You can simulate most of the patterns in the catalog using various builds of the WSO2 EI ESB profile. For ideas on how to design your integrations and step-by-step instructions using example scenarios, see [Enterprise Integration Standards with WSO2 Enterprise Integrator.][eaiwso2-url] You can then refer to this guide for details about the mediators used in the scenarios, how to work with endpoints and proxy services, and so on.
 
-#### <a name="chapter1part9"></a>Chapter 1 - Part 6: Useful links
+#### <a name="chapter1part6"></a>Chapter 1 - Part 6: Useful links
 
 - [WSO2 Certified Enterprise Integrator 6 Developer][certifiedwso2ei6-url]
 
