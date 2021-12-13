@@ -170,14 +170,22 @@ There are other areas, like [Working with Scheduled Tasks][scheduletask-url] and
 	- Create a `Work` folder in `C:\`
 	- Extract the content downloaded to `C:\Work`
 	- The directory `C:\Work\wso2ei-6.1.1` will be called (`WSO2_ESB_HOME`)
-	- Run the Broker: `C:\Work\wso2ei-6.1.1\wso2\broker\bin\wso2server.bat`
-	- When appearing `https://localhost:9446/carbon/` on the Broker console, put this address in the browser.
-	- Run the Analytics: `C:\Work\wso2ei-6.1.1\wso2\analytics\bin\wso2server.bat`
-	- When appearing `https://localhost:9444/carbon/` on the Analytics console, put this address in the browser
-	- Login with login and password `admin`, `admin`.
-	- Run the Integrator: `C:\Work\wso2ei-6.1.1\bin\integrator.bat`
-	- When appearing `https://localhost:9443/carbon/` on the Integrator console, put this address in the browser.
-	- Login with login and password `admin`, `admin`.
+
+- Running Broker, Analytics and ESB
+	- **Broker**
+		- Run the Broker: `C:\Work\wso2ei-6.1.1\wso2\broker\bin\wso2server.bat`
+		- When appearing `https://localhost:9446/carbon/` on the Broker console, put this address in the browser.
+		- Login with login and password `admin`, `admin`.
+
+	- **Analytics**
+		- Run the Analytics: `C:\Work\wso2ei-6.1.1\wso2\analytics\bin\wso2server.bat`
+		- When appearing `https://localhost:9444/carbon/` on the Analytics console, put this address in the browser
+		- Login with login and password `admin`, `admin`.
+
+	- **Integrator**
+		- Run the Integrator: `C:\Work\wso2ei-6.1.1\bin\integrator.bat`
+		- When appearing `https://localhost:9443/carbon/` on the Integrator console, put this address in the browser.
+		- Login with login and password `admin`, `admin`.
 
 - Instalação da IDE Eclipse
 	- Selecionar a versão Enterprise Integrator 6.1.1 -> [Link][wso2eidown-url]
