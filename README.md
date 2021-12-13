@@ -215,11 +215,11 @@ keystore.identity.alias=wso2carbon
 
 #### <a name="chapter2part2"></a>Chapter 2 - Part 2: Integration Example
 
-
+Example: 
 
 # Usage <a name="usage"></a>
 
-Uso pessoal para consulta de rotina laboral
+Demonstration of application
 
 # Contributors <a name="contributors"></a>
 
