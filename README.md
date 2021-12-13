@@ -215,7 +215,7 @@ keystore.identity.alias=wso2carbon
 
 #### <a name="chapter2part2"></a>Chapter 2 - Part 2: Integration Example
 
-References:
+- References:
 	- [Sending a Simple Message to a Service][https://docs.wso2.com/display/EI611/Sending+a+Simple+Message+to+a+Service]
 	- [Sending a Simple Message to a Datasource][https://docs.wso2.com/display/EI611/Sending+a+Simple+Message+to+a+Datasource]
 	- [Routing Requests Based on Message Content][https://docs.wso2.com/display/EI611/Routing+Requests+Based+on+Message+Content]
