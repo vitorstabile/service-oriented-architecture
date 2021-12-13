@@ -220,7 +220,7 @@ keystore.identity.alias=wso2carbon
 	- [Sending a Simple Message to a Datasource](https://docs.wso2.com/display/EI611/Sending+a+Simple+Message+to+a+Datasource)
 	- [Routing Requests Based on Message Content](https://docs.wso2.com/display/EI611/Routing+Requests+Based+on+Message+Content)
 	- [Transforming Message Content](https://docs.wso2.com/display/EI611/Transforming+Message+Content)
-	- [Exposing an RDBMS as a Data Service](Exposing an RDBMS as a Data Service)
+	- [Exposing an RDBMS as a Data Service](https://docs.wso2.com/display/EI611/Exposing+an+RDBMS+as+a+Data+Service)
 	
 	
 
