@@ -7,7 +7,7 @@
 3. [Project Description](#projectdescription)
 4. [Chapter 1: Introduction](#chapter1)
     - [Chapter 1 - Part 1: What is SOA?](#chapter1part1)
-    - [Chapter 1 - Part 2: What is ESB?](#chapter1part2)
+    - [Chapter 1 - Part 2: What is an ESB?](#chapter1part2)
     - [Chapter 1 - Part 3: Quais produtos principais o WSO2 oferece?](#chapter1part2)
     - [Chapter 1 - Part 4: O que é o WSO2 Enterprise Integrator 6.1.1 (WSO2 EI)?](#chapter1part3)
     - [Chapter 1 - Part 5: ESB Profile](#chapter1part4)
@@ -68,6 +68,10 @@ In this way, SOA represents an important stage in the evolution of application d
 [Source][ibmsoa-url]
 
 #### <a name="chapter1part2"></a>Chapter 1 - Part 2: What is an ESB?
+
+An ESB, or enterprise service bus, is an architectural pattern whereby a centralized software component performs integrations between applications.  It performs transformations of data models, handles connectivity/messaging, performs routing, converts communication protocols and potentially manages the composition of multiple requests. The ESB can make these integrations and transformations available as a service interface for reuse by new applications. The ESB pattern is typically implemented using a specially designed integration runtime and toolset that ensures the best possible productivity.
+
+It is possible to implement an SOA without an ESB, but this would be equivalent to just having a bunch of services.  Each application owner would need to directly connect to any service it needs and perform the necessary data transformations to meet each of the service interfaces. This is a lot of work (even if the interfaces are reusable) and creates a significant maintenance challenges in the future as each connection is point to point.  In fact, ESBs were, eventually, considered such a de facto element of any SOA implementation that the two terms are sometimes used as synonyms, creating confusion.
 
 
 
