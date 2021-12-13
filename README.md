@@ -6,15 +6,16 @@
 2. [About the Project](#abouttheproject)
 3. [Project Description](#projectdescription)
 4. [Chapter 1: Introduction](#chapter1)
-    - [Chapter 1 - Part 1: O que é o WSO2?](#chapter1part1)
-    - [Chapter 1 - Part 2: Quais produtos principais o WSO2 oferece?](#chapter1part2)
-    - [Chapter 1 - Part 3: O que é o WSO2 Enterprise Integrator 6.1.1 (WSO2 EI)?](#chapter1part3)
-    - [Chapter 1 - Part 4: ESB Profile](#chapter1part4)
-    - [Chapter 1 - Part 5: Business Process Profile](#chapter1part5)
-    - [Chapter 1 - Part 6: Enterprise Integration Patterns](#chapter1part6)
-    - [Chapter 1 - Part 7: O que é um ESB?](#chapter1part7)
-    - [Chapter 1 - Part 8: Certificações da Plataforma WSO2](#chapter1part8)
-    - [Chapter 1 - Part 9: Links Úteis](#chapter1part9)
+    - [Chapter 1 - Part 1: What is SOA?](#chapter1part1)
+    - [Chapter 1 - Part 2: O que é o WSO2?](#chapter1part1)
+    - [Chapter 1 - Part 3: Quais produtos principais o WSO2 oferece?](#chapter1part2)
+    - [Chapter 1 - Part 4: O que é o WSO2 Enterprise Integrator 6.1.1 (WSO2 EI)?](#chapter1part3)
+    - [Chapter 1 - Part 5: ESB Profile](#chapter1part4)
+    - [Chapter 1 - Part 6: Business Process Profile](#chapter1part5)
+    - [Chapter 1 - Part 7: Enterprise Integration Patterns](#chapter1part6)
+    - [Chapter 1 - Part 8: O que é um ESB?](#chapter1part7)
+    - [Chapter 1 - Part 9: Certificações da Plataforma WSO2](#chapter1part8)
+    - [Chapter 1 - Part 10: Links Úteis](#chapter1part9)
 5. [Chapter 2: Basic WSO2 EI 6.1.1 Tutorial](#chapter2)
     - [Chapter 2 - Part 1: Configurando o WSO2 EI no Windows 10 64 Bits](#chapter2part1)
     - [Chapter 2 - Part 2: Configurando o WSO2 EI no Linux](#chapter2part2)
@@ -42,11 +43,23 @@ This project
 
 Este projeto tem como objetivo, criar tutoriais do ESB WSO2 para consulta.
 
-## <a name="chapter1"></a>Chapter 1: Introdução
+## <a name="chapter1"></a>Chapter 1: Introduction
 
-#### <a name="chapter1part1"></a>Chapter 1 - Part 1: O que é o WSO2?
+#### <a name="chapter1part1"></a>Chapter 1 - Part 1: What is SOA?
 
-É uma plataforma de integração de API´s, aplicações e outras webservices locais ou pela internet.
+SOA, or service-oriented architecture, defines a way to make software components reusable and interoperable via service interfaces. Services use common interface standards and an architectural pattern so they can be rapidly incorporated into new applications.  This removes tasks from the application developer who previously redeveloped or duplicated existing functionality or had to know how to connect or provide interoperability with existing functions.
+
+Each service in an SOA embodies the code and data required to execute a complete, discrete business function (e.g. checking a customer’s credit, calculating a monthly loan payment, or processing a mortgage application). The service interfaces provide loose coupling, meaning they can be called with little or no knowledge of how the service is implemented underneath, reducing the dependencies between applications. 
+
+This interface is a service contract between the service provider and service consumer. Applications behind the service interface can be written in Java, Microsoft .Net, Cobol or any other programming language, supplied as packaged software applications by a vendor (e.g., SAP), SaaS applications (e.g., Salesforce CRM), or obtained as open source applications.  Service interfaces are frequently defined using Web Service Definition Language (WSDL) which is a standard tag structure based on xml (extensible markup language).  
+
+The services are exposed using standard network protocols—such as SOAP (simple object access protocol)/HTTP or Restful HTTP (JSON/HTTP)—to send requests to read or change data. Service governance controls the lifecycle for development and at the appropriate stage the services are published in a registry that enables developers to quickly find them and reuse them to assemble new applications or business processes.
+
+These services can be built from scratch but are often created by exposing functions from legacy systems of record as service interfaces.
+
+In this way, SOA represents an important stage in the evolution of application development and integration over the last few decades. Before SOA emerged in the late 1990s, connecting an application to data or functionality housed in another system required complex point-to-point integration—integration that developers had to recreate, in part or whole, for each new development project. Exposing those functions through SOA services allowed the developer to simply reuse the existing capability and connect through the SOA ESB architecture.
+
+[Source][ibmsoa-url]
 
 #### <a name="chapter1part2"></a>Chapter 1 - Part 2: Quais produtos principais o WSO2 oferece?
 
@@ -625,6 +638,7 @@ https://unsplash.com/
 [issues-url]: https://github.com/vitorstabile/service-oriented-architecture/issues
 [license-shield]: https://img.shields.io/badge/license-mit-blue.svg 
 [license-url]: https://github.com/vitorstabile/service-oriented-architecture/blob/main/LICENSE.txt
+[ibmsoa-url]: https://www.ibm.com/cloud/learn/soa
 [wso2apimanager-url]: https://wso2.com/api-manager/
 [wso2ei-url]: https://wso2.com/integration/
 [wso2identity-url]: https://wso2.com/identity-and-access-management/
