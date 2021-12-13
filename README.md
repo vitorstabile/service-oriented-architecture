@@ -8,7 +8,7 @@
 4. [Chapter 1: Introduction](#chapter1)
     - [Chapter 1 - Part 1: What is SOA?](#chapter1part1)
     - [Chapter 1 - Part 2: What is an ESB?](#chapter1part2)
-    - [Chapter 1 - Part 3: Quais produtos principais o WSO2 oferece?](#chapter1part2)
+    - [Chapter 1 - Part 3: What is WSO2 EI?](#chapter1part3)
     - [Chapter 1 - Part 4: O que é o WSO2 Enterprise Integrator 6.1.1 (WSO2 EI)?](#chapter1part3)
     - [Chapter 1 - Part 5: ESB Profile](#chapter1part4)
     - [Chapter 1 - Part 6: Business Process Profile](#chapter1part5)
@@ -81,11 +81,12 @@ It is possible to implement an SOA without an ESB, but this would be equivalent 
 
 [Source][ibmsoa-url]
 
-#### <a name="chapter1part3"></a>Chapter 1 - Part 3: O que é o WSO2 Enterprise Integrator 6.1.1 (WSO2 EI)?
+#### <a name="chapter1part3"></a>Chapter 1 - Part 3: What is WSO2 EI?
 
-- O WSO2 Enterprise Integrator (WSO2 EI) é uma solução de integração abrangente que permite a comunicação entre vários aplicativos distintos. Em vez de fazer com que seus aplicativos se comuniquem diretamente entre si em todos os seus vários formatos, cada aplicativo simplesmente se comunica com o WSO2 EI, que atua principalmente como um ESB para lidar com a transformação e o roteamento das mensagens para seus destinos apropriados. O produto WSO2 EI pode ser usado para gerenciar fluxos de integração de curta duração **(Short-running integration flows)** e sem estado (usando o perfil ESB), bem como processos de negócios de longa duração **(Long-running business processes)** e com estado (usando o perfil de Processo de Negócios). O produto também inclui um perfil Analytics separado para monitoramento abrangente, um perfil do Message Broker (WSO2 MB) que pode ser usado para mensagens confiáveis, bem como o perfil WSO2 MSF4j, que pode ser usado para executar microsserviços para seus fluxos de integração.
+WSO2 Enterprise Integrator (WSO2 EI) is an open-source hybrid integration platform providing graphical and CLI tooling, integration runtimes, and monitoring with a variety of deployment options. The integration runtime engine is capable of playing multiple roles in your enterprise architecture. It can act as an ESB, a streaming data processor, and a microservices integrator. Deployment options include on-premises, cloud, hybrid, or a container orchestration platform of choice.
 
-- Portanto, WSO2 EI é essencialmente uma coleção de padrões de design de arquitetura corporativa (WSO2 ESB ++) que podem ser implementados diretamente usando um único produto. Este produto é leve e versátil. É 100% open source e é lançado sob a Apache Software License Version 2.0, uma das licenças mais amigáveis para negócios disponíveis atualmente.
+
+#### <a name="chapter1part4"></a>Chapter 1 - Part 4: Example of use of WSO2 ESB
 
 <br>
 
@@ -93,46 +94,26 @@ It is possible to implement an SOA without an ESB, but this would be equivalent 
 
 <br>
 
-Exemplo de fluxo de como uma request de uma aplicação com seu [endpoint][endpoint-url] se propaga através do perfil ESB (Enterprise Service Bus). A Response seria o inverso desse fluxo.
+Flow example of how an application's request with its [endpoint][endpoint-url] propagates through the ESB (Enterprise Service Bus) profile. Response would be the inverse of this flow.
 
-1. Um aplicativo (cliente) envia uma mensagem ao perfil ESB do WSO2 EI.
-2. A mensagem é captada por um [transporte][transporte-url].
-3. O transporte envia a mensagem por meio de um message pipe, que lida com aspectos de qualidade de serviço, como segurança. Internamente, esse pipe é o fluxo de entrada e saída do motor Axis2. O perfil ESB pode operar em dois modos:
-	- [Mediating Message][mediatingmessage-url] - Um único pipe é usado
-	- [Proxy Services][proxyservice-url] - Pipes separados conectando o transporte a diferentes serviços de proxy.
-4. A transformação e o roteamento da mensagem podem ser considerados como uma única unidade. Conforme especifica o diagrama, não há separação clara entre os componentes de transformação da mensagem e os componentes de roteamento. No perfil ESB do WSO2 EI, isso é conhecido como estrutura de mediação. Algumas transformações ocorrem antes que a decisão de roteamento seja feita, enquanto outras ocorrem após a decisão de roteamento. Isso faz parte da implementação do Synapse.
-5. A mensagem é injetada em pipes separados, dependendo dos destinos. Aqui, novamente, os aspectos de qualidade de serviço das mensagens são determinados.
-6. A camada de transporte cuida das transformações do protocolo de transporte que são necessárias antes de enviar a mensagem ao aplicativo do cliente.
+1. An application (client) sends a message to the ESB profile of the WSO2 EI.
+2. The message is picked up by a [transport][transporte-url].
+3. The transport sends the message through a message pipe, which handles quality of service aspects such as security. Internally, this pipe is the input and output stream of the Axis2 engine. The ESB profile can operate in two modes:
+	- [Mediating Message][mediatingmessage-url] - A single pipe is used
+	- [Proxy Services][proxyservice-url] - Separate pipes connecting the transport to different proxy services.
+4. Message transformation and routing can be considered as a single unit. As the diagram specifies, there is no clear separation between the message transformation components and the routing components. In the ESB profile of the WSO2 EI, this is known as the mediation framework. Some transformations occur before the routing decision is made, while others occur after the routing decision. This is part of the Synapse implementation.
+5. The message is injected over separate pipes depending on the destinations. Here again, the quality of service aspects of the messages are determined.
+6. The transport layer takes care of transport protocol transformations that are required before sending the message to the client application.
 
-A Mensagem é enviada ao aplicativo do cliente
+Message is sent to client application
 
-Existem outras áreas, como [Working with Scheduled Tasks][scheduletask-url] e [Events][events-url], que não são mostradas no diagrama. Todos esses componentes podem ser analisados e monitorados e realizar o rastreamento de mensagens usando o perfil [EI-Analytics][eianalytics-url].
-
-#### <a name="chapter1part4"></a>Chapter 1 - Part 4: ESB Profile
-
-- O perfil ESB no WSO2 EI **(ESB Profile)** fornece seus serviços fundamentais por meio de um mecanismo de mensagens orientado a eventos e baseado em padrões (o barramento), que permite que os arquitetos de integração explorem o valor das mensagens sem escrever código. Este perfil ESB está um passo à frente das versões anteriores do WSO2 Enterprise Service Bus, pois fornece recursos de integração de dados no mesmo tempo de execução. Isso elimina a necessidade de usar um servidor de serviços de dados separado para seus processos de integração.
-
-#### <a name="chapter1part5"></a>Chapter 1 - Part 5: Business Process Profile
-
-- O perfil de processo de negócios no WSO2 EI **(Business Process Profile)** permite que os desenvolvedores implantem facilmente processos de integração de longa duração (processos de negócios). Esses processos são escritos usando o seguinte: Um subconjunto do padrão BPMN 2.0, padrões WS-BPEL 2.0 e BPEL4People e WS-Human Tasks. Equipado com o motor BPEL Activiti BPMN Engine 5.21.0 e Apache Orchestration Director Engine (ODE), o perfil de processo de negócios no WSO2 EI vem com um console de gerenciamento gráfico completo baseado na web, permitindo aos usuários facilmente implantar, gerenciar, visualizar e executar processos bem como tarefas humanas.
+There are other areas, like [Working with Scheduled Tasks][scheduletask-url] and [Events][events-url], which are not shown in the diagram. All these components can be analyzed and monitored and perform message tracking using the profile [EI-Analytics][eianalytics-url].
 
 #### <a name="chapter1part6"></a>Chapter 1 - Part 6: Enterprise Integration Patterns
 
-- Ao longo dos anos, os arquitetos inventaram uma combinação de padrões de integração para conectar vários aplicativos de negócios dentro de sistemas corporativos. A maioria dessas arquiteturas tem semelhanças, iniciando um conjunto de padrões amplamente aceitos em padrões de integração. Esses padrões são descritos no Catálogo de Padrões de Integração Corporativa disponível [aqui][eai-url].
+- Over the years, architects have invented a combination of integration patterns to connect various business applications within enterprise systems. Most of these architectures have similarities, starting a set of widely accepted patterns in integration patterns. These standards are described in the Enterprise Integration Standards Catalog available [her][eai-url].
 
-- Você pode simular a maioria dos padrões no catálogo usando várias construções do perfil ESB do WSO2 EI. Para obter ideias sobre como projetar suas integrações e obter instruções passo a passo usando cenários de exemplo, consulte [Padrões de integração corporativa com WSO2 Enterprise Integrator.][eaiwso2-url] Você pode então consultar este guia para obter detalhes sobre os mediadores usados nos cenários, como trabalhar com pontos de extremidade e serviços de proxy e assim por diante.
-
-#### <a name="chapter1part7"></a>Chapter 1 - Part 7: O que é um ESB?
-
-- O Enterprise Service Bus (ESB) se refere à arquitetura de construção de software tipicamente implementado em tecnologias encontradas na categoria de produtos de infra-estrutura de middleware. Normalmente baseado no reconhecimento de padrões, que fornecem uma base de serviços para arquiteturas mais complexas via um driver de evento e padrões baseados em mensagens (BUS). Um ESB geralmente fornece uma abstração de camadas na implementação de um sistema empresarial de mensagens, que permita integração da arquitetura para explorar o valor das mensagens sem escrever código. Contrariando a clássica integração de aplicações comerciais (EAI). A base de um enterprise service bus é construída da quebra de funções básicas em partes, que são distribuídas onde for preciso. ESB não implementa uma arquitetura orientada a serviço (SOA), mas fornece as características para que possa ser implementado. ESB não necessariamente precisa ser implementado usando web services. ESB devem ser baseados em padrões flexíveis, suportando vários meios de transporte. Baseado no EAI melhor que padrões SOA, ele tenta remover o acoplamento entre o serviço chamado e o meio de transporte. A maioria dos fornecedores de ESB constroem agora ESBs para incorporar princípios de SOA e para aumentar suas vendas, por exemplo Business Process Execution Language(BPEL).
-
-- A palavra "bus" é a referência para o meio físico que carrega bits entre dispositivos em um computador. O ESB serve a uma função análoga a alto nível de abstração. Em uma arquitetura empresarial fazendo uso de um ESB, uma aplicação irá comunicar via barramento, que atua como um message broker entre aplicações. A principal vantagem de com uma aproximação é a redução de conexões ponto a ponto necessárias para permitir a comunicação entre aplicações. Isto por sua vez afeta diretamente na simplificação das mudanças de sistema. Por reduzir o número de conexões ponto a ponto para uma aplicação específica, o processo de adaptar um sistema às mudanças em um de seus componentes torna-se mais fácil.
-
-<br>
-
-<div align="center"><img src="img/chapter1/esb-w800-h1414.png" width=400 height=700><br><sub>Fig 2 - Exemplo de ESB - (<a href='https://pt.wikipedia.org/wiki/Enterprise_Service_Bus'>Work by Wikipedia</a>) </sub></div>
-
-<br>
+- You can simulate most of the patterns in the catalog using various builds of the WSO2 EI ESB profile. For ideas on how to design your integrations and step-by-step instructions using example scenarios, see [Enterprise Integration Standards with WSO2 Enterprise Integrator.][eaiwso2-url] You can then refer to this guide for details about the mediators used in the scenarios, how to work with endpoints and proxy services, and so on.
 
 #### <a name="chapter1part8"></a>Chapter 1 - Part 8: Certificações da Plataforma WSO2
 
