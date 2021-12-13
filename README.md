@@ -1,4 +1,4 @@
-<h1 align="center"> Serviços de Integração </h1>
+<h1 align="center"> Service-Oriented Architecture Project </h1>
 
 # Content
 
@@ -34,7 +34,7 @@ Project Status: Under Development :warning:
 
 # About the Project <a name="abouttheproject"></a>
 
-Projeto relacionado sobre integração de sistemas utilizando o ESB WSO2.
+This project
 
 [![Project][project-shield]][project-url]
 
