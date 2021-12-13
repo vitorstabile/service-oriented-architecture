@@ -297,7 +297,7 @@ https://unsplash.com/
 <!-- MY BADGES -->
 
 [project-shield]: https://img.shields.io/badge/link-project-green.svg
-[project-url]: https://github.com/vitorstabile/work/tree/main/AMA
+[project-url]: https://github.com/vitorstabile/service-oriented-architecture
 [linkedin-shield]: https://img.shields.io/badge/my-linkedin-blue.svg 
 [linkedin-url]: https://www.linkedin.com/in/vitor-garcia-5b151b67/
 [portfolio-shield]: https://img.shields.io/badge/my-portfolio-red.svg
