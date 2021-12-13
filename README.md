@@ -555,7 +555,7 @@ See the [![Issues][issues-shield]][issues-url]  for a list of proposed features 
 
 # To Do <a name="todo"></a>
 
-Project Completed
+Usage for project in SOA overview.
 
 # Contacts <a name="contacts"></a>
 
