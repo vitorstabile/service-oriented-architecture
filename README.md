@@ -59,6 +59,12 @@ These services can be built from scratch but are often created by exposing funct
 
 In this way, SOA represents an important stage in the evolution of application development and integration over the last few decades. Before SOA emerged in the late 1990s, connecting an application to data or functionality housed in another system required complex point-to-point integration—integration that developers had to recreate, in part or whole, for each new development project. Exposing those functions through SOA services allowed the developer to simply reuse the existing capability and connect through the SOA ESB architecture.
 
+<br>
+
+<div align="center"><img src="img/monoliticvssoa-w1164-h620.png" width=1164 height=620><br><sub>Fig 1 - Monolith Architecture vs SOA Architecture  - (<a href='https://mualle.net/microservices-architecture-vs-service-oriented-architecture/'>Work by Mualle Mats'ela </a>) </sub></div>
+
+<br>
+
 [Source][ibmsoa-url]
 
 #### <a name="chapter1part2"></a>Chapter 1 - Part 2: Quais produtos principais o WSO2 oferece?
