@@ -29,13 +29,13 @@ Project Status: Concluded :heavy_check_mark:
 
 # About the Project <a name="abouttheproject"></a>
 
-This project 
+This project will demonstrate some examples that I had the opportunity to work with during my project at AMA, showing an approach of SOA architecture and system integrations using Java 8, MySQL and the WSO2 EI middleware platform.
 
 [![Project][project-shield]][project-url]
 
 # Project Description <a name="projectdescription"></a>
 
-Este projeto tem como objetivo, criar tutoriais do ESB WSO2 para consulta.
+During my 
 
 ## <a name="chapter1"></a>Chapter 1: Introduction
 
