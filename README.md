@@ -11,13 +11,11 @@
     - [Chapter 1 - Part 3: What is WSO2 EI?](#chapter1part3)
     - [Chapter 1 - Part 4: WSO2 ESB by Example](#chapter1part4)
     - [Chapter 1 - Part 5: Enterprise Integration Patterns](#chapter1part5)
-    - [Chapter 1 - Part 9: Certificações da Plataforma WSO2](#chapter1part8)
-    - [Chapter 1 - Part 10: Links Úteis](#chapter1part9)
+    - [Chapter 1 - Part 6: Useful links](#chapter1part6)
 5. [Chapter 2: Basic WSO2 EI 6.1.1 Tutorial](#chapter2)
-    - [Chapter 2 - Part 1: Configurando o WSO2 EI no Windows 10 64 Bits](#chapter2part1)
-    - [Chapter 2 - Part 2: Configurando o WSO2 EI no Linux](#chapter2part2)
-    - [Chapter 2 - Part 3: Working with Proxy Services](#chapter2part3)
-    - [Chapter 2 - Part 4: Extracting Message Content](#chapter2part4)
+    - [Chapter 2 - Part 1: Configuring WSO2 EI 6.1.1 on Windows 10 64 Bit](#chapter2part1)
+    - [Chapter 2 - Part 2: Working with Proxy Services](#chapter2part2)
+    - [Chapter 2 - Part 3: Extracting Message Content](#chapter2part3)
 6. [Usage](#usage)
 7. [Contributors](#contributors)
 8. [Contributing](#contributing)
@@ -112,12 +110,11 @@ There are other areas, like [Working with Scheduled Tasks][scheduletask-url] and
 
 - You can simulate most of the patterns in the catalog using various builds of the WSO2 EI ESB profile. For ideas on how to design your integrations and step-by-step instructions using example scenarios, see [Enterprise Integration Standards with WSO2 Enterprise Integrator.][eaiwso2-url] You can then refer to this guide for details about the mediators used in the scenarios, how to work with endpoints and proxy services, and so on.
 
-#### <a name="chapter1part8"></a>Chapter 1 - Part 8: Certificações da Plataforma WSO2
+#### <a name="chapter1part9"></a>Chapter 1 - Part 6: Useful links
 
 - [WSO2 Certified Enterprise Integrator 6 Developer][certifiedwso2ei6-url]
-- [WSO2 Certified API Manager Developer - V3][certifiedwso2apimanagerv3-url]
 
-#### <a name="chapter1part9"></a>Chapter 1 - Part 9: Links Úteis
+- [WSO2 Certified API Manager Developer - V3][certifiedwso2apimanagerv3-url]
 
 - [Enterprise Integration Patterns][eai2-url]
 
@@ -155,9 +152,9 @@ There are other areas, like [Working with Scheduled Tasks][scheduletask-url] and
  	- [Link 1][wsdl-url]
  	- [Link 2][wsdl2-url]
 
-## <a name="chapter2"></a>Chapter 2: Tutorial Básico WSO2 EI 6.1.1
+## <a name="chapter2"></a>Chapter 2: Basic WSO2 EI 6.1.1 Tutorial
 
-#### <a name="chapter2part1"></a>Chapter 2 - Part 1: Configurando o WSO2 EI no Windows 10 64 Bits
+#### <a name="chapter2part1"></a>Chapter 2 - Part 1: Configuring WSO2 EI 6.1.1 on Windows 10 64 Bit
 
 - Instalação do Java JDK 8
 	- Baixar e instalar o Java JDK 8 da Zulu (zulu8.54.0.21-ca-jdk8.0.292-win_x64) -> [Link][zulujava-url]
@@ -271,11 +268,7 @@ keystore.identity.alias=wso2carbon
 #
 ```
 
-#### <a name="chapter2part2"></a>Chapter 2 - Part 2: Configurando o WSO2 EI no Linux
-
-Em Desenvolvimento
-
-#### <a name="chapter2part3"></a>Chapter 2 - Part 3: Trabalhando com Proxy Services
+#### <a name="chapter2part2"></a>Chapter 2 - Part 2: Working with Proxy Services
 
 Documentação: [Working with Proxy Services][workproxy-url]
 
@@ -507,7 +500,7 @@ Connection: Keep-Alive
 </soap:Envelope>
 ```
 
-#### <a name="chapter2part4"></a>Chapter 2 - Part 4: Extraindo Conteúdo de Mensagens com Proxy Services
+#### <a name="chapter2part3"></a>Chapter 2 - Part 3: Extracting Message Content
 
 Neste exemplo, iremos criar um proxy service, que irá receber uma mensagem de um cliente (seja em XML ou JSON) e irá retornar uma resposta para o cliente e iremos extrair o conteudo da mensagem para ser apresentada no Log do Integrator
 
