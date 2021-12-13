@@ -9,11 +9,8 @@
     - [Chapter 1 - Part 1: What is SOA?](#chapter1part1)
     - [Chapter 1 - Part 2: What is an ESB?](#chapter1part2)
     - [Chapter 1 - Part 3: What is WSO2 EI?](#chapter1part3)
-    - [Chapter 1 - Part 4: O que é o WSO2 Enterprise Integrator 6.1.1 (WSO2 EI)?](#chapter1part3)
-    - [Chapter 1 - Part 5: ESB Profile](#chapter1part4)
-    - [Chapter 1 - Part 6: Business Process Profile](#chapter1part5)
-    - [Chapter 1 - Part 7: Enterprise Integration Patterns](#chapter1part6)
-    - [Chapter 1 - Part 8: O que é um ESB?](#chapter1part7)
+    - [Chapter 1 - Part 4: WSO2 ESB by Example](#chapter1part4)
+    - [Chapter 1 - Part 5: Enterprise Integration Patterns](#chapter1part5)
     - [Chapter 1 - Part 9: Certificações da Plataforma WSO2](#chapter1part8)
     - [Chapter 1 - Part 10: Links Úteis](#chapter1part9)
 5. [Chapter 2: Basic WSO2 EI 6.1.1 Tutorial](#chapter2)
@@ -86,7 +83,7 @@ It is possible to implement an SOA without an ESB, but this would be equivalent 
 WSO2 Enterprise Integrator (WSO2 EI) is an open-source hybrid integration platform providing graphical and CLI tooling, integration runtimes, and monitoring with a variety of deployment options. The integration runtime engine is capable of playing multiple roles in your enterprise architecture. It can act as an ESB, a streaming data processor, and a microservices integrator. Deployment options include on-premises, cloud, hybrid, or a container orchestration platform of choice.
 
 
-#### <a name="chapter1part4"></a>Chapter 1 - Part 4: Example of use of WSO2 ESB
+#### <a name="chapter1part4"></a>Chapter 1 - Part 4: WSO2 ESB by Example
 
 <br>
 
@@ -109,7 +106,7 @@ Message is sent to client application
 
 There are other areas, like [Working with Scheduled Tasks][scheduletask-url] and [Events][events-url], which are not shown in the diagram. All these components can be analyzed and monitored and perform message tracking using the profile [EI-Analytics][eianalytics-url].
 
-#### <a name="chapter1part6"></a>Chapter 1 - Part 6: Enterprise Integration Patterns
+#### <a name="chapter1part5"></a>Chapter 1 - Part 5: Enterprise Integration Patterns
 
 - Over the years, architects have invented a combination of integration patterns to connect various business applications within enterprise systems. Most of these architectures have similarities, starting a set of widely accepted patterns in integration patterns. These standards are described in the Enterprise Integration Standards Catalog available [her][eai-url].
 
