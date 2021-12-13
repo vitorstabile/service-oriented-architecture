@@ -73,7 +73,11 @@ An ESB, or enterprise service bus, is an architectural pattern whereby a central
 
 It is possible to implement an SOA without an ESB, but this would be equivalent to just having a bunch of services.  Each application owner would need to directly connect to any service it needs and perform the necessary data transformations to meet each of the service interfaces. This is a lot of work (even if the interfaces are reusable) and creates a significant maintenance challenges in the future as each connection is point to point.  In fact, ESBs were, eventually, considered such a de facto element of any SOA implementation that the two terms are sometimes used as synonyms, creating confusion.
 
+<br>
 
+<div align="center"><img src="img/esb-w590-h365.gif" width=590 height=365><br><sub>Fig 2 - ESB  - (<a href='https://wso2.com/integration/'>Work by WSO2 </a>) </sub></div>
+
+<br>
 
 [Source][ibmsoa-url]
 
